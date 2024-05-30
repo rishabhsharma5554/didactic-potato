@@ -1,0 +1,27 @@
+banner:
+  application:
+    title: Microservice Spring Security 6
+    version: 1.0
+
+server:
+  port: 8080
+
+spring:
+  application:
+      name: MS-SpringSecurity6
+  datasource:
+    url: jdbc:h2:mem:db-security6
+    driver-class-name: org.h2.Driver
+    username: admin
+    password: admin
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    show-sql: true
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.yml
+    enabled: true
+
